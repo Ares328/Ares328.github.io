@@ -1,0 +1,40 @@
+/*-- HTML --*/
+html {
+    background-color: #FCF897;
+    font-family: 'Spartan', sans-serif;
+}
+
+/*-- HTML End --*/
+
+/*-- Header --*/
+
+/*-- Navigation --*/
+#topnav {
+  background-color: #D2CA18;
+  overflow: hidden;
+}
+
+#topnav a {
+  float: left;
+  color: #000000;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+#topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+#topnav a.active {
+  background-color: #FFF400;
+}
+/*-- Navigation End --*/
+
+/*-- Header End --*/
+
+/*-- Body --*/
+
+/*-- Body End --*/
