@@ -5,6 +5,18 @@ html {
     max-width: 100%;
 }
 
+.subtext {
+    padding-left: 30px;
+}
+
+.bottomline {
+    padding-bottom: 10px;    
+}
+
+.firstName {
+    padding-top: 50px;
+}
+
 /*-- HTML End --*/
 
 /*-- Header --*/
@@ -19,7 +31,7 @@ html {
   float: left;
   color: #000000;
   text-align: center;
-  padding: 14px 16px;
+  padding: 14px 10px;
   text-decoration: none;
   font-size: 17px;
 }
@@ -66,6 +78,7 @@ section{
 
 h2 {
     text-align:center;
+    line-height: 50px;
     border-style: solid;
 }
 /*
@@ -80,6 +93,10 @@ h2 {
 
 .skillsinfo {
     list-style-type: circle;
+}
+
+.subclassh4 {
+    padding-left: 50px;
 }
 
 .grid-container {
