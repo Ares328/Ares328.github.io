@@ -14,7 +14,7 @@ html {
 }
 
 .firstName {
-    padding-top: 50px;
+    padding-top: 70px;
 }
 
 /*-- HTML End --*/
@@ -66,14 +66,25 @@ section{
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 50%;
-    height: 150px;
-    border-radius: 50%;
-    padding-bottom: 10px;
+    border-radius:50%;
+    width: 200px;
+    height: 200px;
 }
 
 .contactinfo {
     
+}
+
+.gridinfo {
+  display: grid;
+  grid-template-columns: 25% 75%;
+    
+}
+.display-item1 {
+    padding: 5px;
+}
+.display-item2 {
+    padding: 5px;
 }
 
 h2 {
