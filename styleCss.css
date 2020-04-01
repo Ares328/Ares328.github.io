@@ -1,6 +1,6 @@
 /*-- HTML --*/
 html {
-    background-color: #FCF897;
+    background-color: #dcdcdc;
     font-family: 'Spartan', sans-serif;
     max-width: 100%;
 }
@@ -117,7 +117,7 @@ h2 {
 }
 
 .grid-item1 {
-    background-color: aqua;
+    background-color: #7CBAD3;
     padding: 20px;
 }
 .grid-item2 {
