@@ -23,7 +23,7 @@ html {
 
 /*-- Navigation --*/
 #topnav {
-  background-color: #D2CA18;
+  background-color: #7CBAD3;
   overflow: hidden;
 }
 
@@ -42,7 +42,7 @@ html {
 }
 
 #topnav a.active {
-  background-color: #FFF400;
+  background-color: #335AFF;
 }
 /*-- Navigation End --*/
 
@@ -73,6 +73,10 @@ section{
 
 .contactinfo {
     
+}
+
+.far{
+    float: right;
 }
 
 .gridinfo {
