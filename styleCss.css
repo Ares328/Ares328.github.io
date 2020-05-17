@@ -16,6 +16,9 @@ html {
 .firstName {
     padding-top: 70px;
 }
+.competentiesidebar{
+    
+}
 
 /*-- HTML End --*/
 
@@ -24,11 +27,14 @@ html {
 /*-- Navigation --*/
 #topnav {
   background-color: #7CBAD3;
-  overflow: hidden;
+  margin-top: 20px;
+  padding: 20px;
+  width: 33%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #topnav a {
-  float: left;
   color: #000000;
   text-align: center;
   padding: 14px 10px;
@@ -53,6 +59,46 @@ body {
     max-width: 100%;
     margin: 0px;
 }
+/*-- Article --*/
+#indexHeader{
+    margin-top: 20px;
+    width: 50%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: double;
+}
+
+#indexContext{
+    margin-top: 20px;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.column {
+  float: left;
+    width: 19%;
+  border-style: groove;
+}
+.row{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto; 
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+#linav a.active {
+  background-color: #7CBAD3;
+}
+.column p{
+    margin-top: 2px;
+}
+/*-- Article End --*/
 
 /*-- Section --*/
 section{
@@ -128,5 +174,13 @@ h2 {
     padding: 20px;
 }
 /*-- Section End --*/
+
+/*-- Footer --*/
+footer {
+  background-color: #7CBAD3;
+  width: 100%;
+  text-align: center;
+}
+/*-- Footer End --*/
 
 /*-- Body End --*/
