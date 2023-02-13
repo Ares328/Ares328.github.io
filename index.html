@@ -2,18 +2,98 @@
 <html>
 
 <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="icon" type="image/x-icon" href="/images/heart.webp">
     <link type="text/css" rel="stylesheet" href="reset.css">
     <link type="text/css" rel="stylesheet" href="styling.css">
-    <title id="title">Home</title>
+    <title id="title">Valentine's - Julia</title>
 </head>
 
 <body>
-    <header>
+  <div class="title">
+    <h1>
+      I know it's a little cheesy, but will you be my Valentine Julia?
+    </h1>
+    <p>
+      Hover over the envelope if so.
+    </p>
+  </div>
 
-    </header>
-    
-    <footer>
-    </footer>
-
+  <div class="container">  
+    <div class="valentines">
+      <div class="envelope"></div>
+      <div class="envelopefront"></div>
+      <div class="front"></div>
+      <div id="card" class="card">
+      <div class="text">Congrats on stealing my heart you fucker,<br />happy valentine's<br />Julia </div>
+      <div class="hearts">
+        <div class="one"></div>
+        <div class="two"></div>
+        <div class="three"></div>
+        <div class="four"></div>
+        <div class="five"></div>
+      </div>
+    </div>
+    <div class="shadow"></div>
+    </div>
+  </div>
 </body>
+  <script>
+    var isOpen = false
+    $(document).ready(function () {
+        $('.container').mouseenter(function () {
+          if($(document).width() >= 1000){
+            isOpen = true
+            $('.card').stop().animate({
+                top: '-90px'
+            }, 'slow');
+            $('.card').css("visibility","visible");
+            $('.envelope').css('visibility', 'visible');
+            $('.hearts').css('visibility', 'visible');
+          }
+        }).mouseleave(function () {
+          if($(document).width() >= 1000){
+            isOpen = false
+              $('.card').stop().animate({
+                  top: 0
+              }, 'slow');
+              setTimeout(() => {
+                if(isOpen === false){
+                  $('.card').css("visibility","hidden");
+                  $('.envelopefront').css('visibility', 'visible');
+                  $('.envelope').css('visibility', 'hidden');
+                  $('.hearts').css('visibility', 'hidden');
+                }
+              }, "1000");
+          }
+        });
+        $('.container').on('mouseup', function () {
+          if($(document).width() < 1000){
+            if(isOpen){
+              isOpen = false
+              $('.card').stop().animate({
+                  top: 0
+              }, 'slow');
+              setTimeout(() => {
+                if(isOpen === false){
+                  $('.card').css("visibility","hidden");
+                  $('.envelopefront').css('visibility', 'visible');
+                  $('.envelope').css('visibility', 'hidden');
+                  $('.hearts').css('visibility', 'hidden');
+                }
+              }, "1000"); 
+            } else {
+              isOpen = true
+              $('.card').stop().animate({
+                top: '-90px'
+              }, 'slow');
+              $('.card').css("visibility","visible");
+              $('.envelope').css('visibility', 'visible');
+              $('.hearts').css('visibility', 'visible');
+            }
+          }
+
+        });
+    });
+  </script>
 </html>
