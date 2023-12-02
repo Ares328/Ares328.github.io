@@ -1,7 +1,7 @@
 import WindowManager from './WindowManager.js'
 
 
-
+let set = false
 const t = THREE;
 let camera, scene, renderer, world;
 let near, far;
@@ -128,8 +128,6 @@ else
 			let c = new t.Color();
 			c.setHSL(i * .1, 1.0, .5);
 
-			let s = 100 + i * 50;
-
       // Define the number of points for the heart shape
       const numPoints = 100;
 
@@ -153,13 +151,15 @@ else
       const heartShapeSecondHalf = heartShapeFirstHalf.map(point => {
         return new THREE.Vector3(-point.x, point.y, point.z);
       });
-
-      const material = new t.PointsMaterial({ color: c, size: 0.1 });
+      
+      let material
       let geometry
       if (isEven(i)) {
         geometry = new t.BufferGeometry().setFromPoints(heartShapeFirstHalf);
+        material = new t.PointsMaterial({ color: "#DC143C", size: 0.1 });
       } else {
         geometry = new t.BufferGeometry().setFromPoints(heartShapeSecondHalf);
+        material = new t.PointsMaterial({ color: "#8B0000", size: 0.1 });
       }
 
 
