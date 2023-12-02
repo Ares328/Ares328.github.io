@@ -1,0 +1,25 @@
+body {
+  background-color: black;
+  background-size: 60% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: 'Corinthia', cursive;
+  color: red;
+  font-size: 40px;
+}
+
+.active {
+  background: radial-gradient(red 0%, black 5%);
+  background-size: 60% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+body h2 {
+  display: none;
+}
+
+body.active h2 {
+  display: block;
+}
