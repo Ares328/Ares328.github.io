@@ -1,6 +1,6 @@
 import WindowManager from './WindowManager.js'
 
-
+let name
 let set = false
 const t = THREE;
 let camera, scene, renderer, world;
@@ -162,6 +162,21 @@ else
         material = new t.PointsMaterial({ color: "#8B0000", size: 0.1 });
       }
 
+      if (isEven(wins.length)) {
+        if (set === false) {
+          name = "(Quinten)"
+          document.getElementById("NAME").innerHTML = name
+          set = true;
+          
+        }
+      } else {
+        if (set === false) {
+          name = "(Anastasia)"
+          document.getElementById("NAME").innerHTML = name
+          set = true;
+        }
+      }
+
 
       let cube = new t.Points(geometry, material);
 			cube.position.x = win.shape.x + (win.shape.w * .5);
@@ -202,16 +217,17 @@ else
 		// loop through all our cubes and update their positions based on current window positions
 		for (let i = 0; i < cubes.length; i++)
 		{
-      
 			let cube = cubes[i];
 			let win = wins[i];
 			let _t = t;// + i * .2;
       if (cubes[1]) {
         if (Math.trunc(cubes[0].position.x) == Math.trunc(cubes[1]?.position?.x)) {
           var body = document.body;
+          document.getElementById("NAME").innerHTML = "(Quintie & Ani)"
           body.classList.add("active");
         } else {
           var body = document.body;
+          document.getElementById("NAME").innerHTML = name
           body.classList.remove("active")
         }
       } 
