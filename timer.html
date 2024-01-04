@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Corinthia:wght@700&family=Sassy+Frass&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/styling.css">
+  <title>My loved one returns to me!</title>
+    <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    #countdown-container {
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <div style="font-family: 'Corinthia', cursive;font-size: 100px;margin-bottom:100px">Time untill I see you again..</div>
+  <div style="font-family: 'Corinthia', cursive;font-size: 80px;" id="countdown"></div>
+  <script>
+    // Function to calculate remaining time
+    function getTimeRemaining(endtime) {
+      const total = Date.parse(endtime) - Date.parse(new Date());
+      const seconds = Math.floor((total / 1000) % 60);
+      const minutes = Math.floor((total / 1000 / 60) % 60);
+      const hours = Math.floor((total / (1000 * 60 * 60)) % 24);
+      const days = Math.floor(total / (1000 * 60 * 60 * 24));
+      
+      return {
+        total,
+        days,
+        hours,
+        minutes,
+        seconds
+      };
+    }
+    
+    // Function to initialize and display the countdown
+    function initializeClock(endtime) {
+      const countdown = document.getElementById('countdown');
+    
+      function updateClock() {
+        const t = getTimeRemaining(endtime);
+    
+        countdown.innerHTML = `
+          <div>${t.days} days, ${t.hours} hours, ${t.minutes} minutes, ${t.seconds} seconds</div>
+        `;
+    
+        if (t.total <= 0) {
+          clearInterval(timeinterval);
+          countdown.innerHTML = 'Countdown expired';
+        }
+      }
+    
+      updateClock();
+      const timeinterval = setInterval(updateClock, 1000);
+    }
+    
+    // Set the deadline to July 1st of the current year
+    const deadline = new Date(new Date().getFullYear(), 6, 1);
+    initializeClock(deadline);
+    </script>
+</body>
+
+</html>
