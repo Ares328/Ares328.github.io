@@ -125,6 +125,30 @@ hr {
   transform: rotate(-10deg);
   bottom: 0px;
 }
+.page .coupleimg5 {
+  position: absolute;
+  width: 105px;
+  top: 100px;
+  right: 200px;
+  transform: rotate(-10deg);
+  bottom: 0px;
+}
+.page .coupleimg6 {
+  position: absolute;
+  width: 50px;
+  right: 230px;
+  top: 150px;
+  transform: rotate(-5deg);
+  bottom: 0px;
+}
+.page .coupleimg7 {
+  position: absolute;
+  width: 50px;
+  right: 20px;
+  top: 50px;
+  transform: rotate(30deg);
+  bottom: 0px;
+}
 
 .page p {
   transform: rotateY(180deg);
