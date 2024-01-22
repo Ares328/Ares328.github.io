@@ -15,6 +15,10 @@ body {
   perspective: 70rem;
 }
 
+.book .valentine {
+  color: red;
+}
+
 @media screen and (max-width: 600px) {
   .book {
     transform: rotate(90deg);
@@ -89,6 +93,39 @@ hr {
   bottom: 0px;
 }
 
+.page .coupleimg1 {
+  position: absolute;
+  width: 150px;
+  top: 50px;
+  right: 60px;
+  transform: rotate(-5deg);
+  bottom: 0px;
+}
+.page .coupleimg2 {
+  position: absolute;
+  width: 100px;
+  top: 200px;
+  right: 160px;
+  transform: rotate(-15deg);
+  bottom: 0px;
+}
+.page .coupleimg3 {
+  position: absolute;
+  width: 100px;
+  top: 200px;
+  right: 30px;
+  transform: rotate(15deg);
+  bottom: 0px;
+}
+.page .coupleimg4 {
+  position: absolute;
+  width: 105px;
+  top: 20px;
+  right: 190px;
+  transform: rotate(-10deg);
+  bottom: 0px;
+}
+
 .page p {
   transform: rotateY(180deg);
   margin: 0;
@@ -117,7 +154,7 @@ hr {
 
 .book.open .page.turn {
   transform-origin: left;
-  animation: bookOpen 3s forwards;
+  animation: bookOpen 6s forwards;
 }
 
 .book.open .page:nth-of-type(1) {
@@ -136,7 +173,7 @@ hr {
 .book.open .page:nth-of-type(4) {
   transform-origin: left;
   animation: bookOpen175deg 3s forwards;
-  animation-delay: 0.99s;
+  animation-delay: .11s;
 }
 
 .book.open .page:nth-of-type(5) {
