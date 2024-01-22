@@ -19,13 +19,13 @@
     <div style="display:flex;margin: auto;justify-content: center;gap: 40px">
       <button id="move" onmouseenter="runaway(this)" onmousedown="runaway(this)">NO</button>
       <button
-        onclick="document.getElementById('flowers').style = 'display: flex';document.getElementById('textt').style = 'display: block;color: red;';document.getElementById('texttt').style = 'display: block;color: red;'">YES</button>
+        onclick="makeclickable();document.getElementById('flowers').style = 'display: flex';document.getElementById('textt').style = 'display: block;color: red;';document.getElementById('texttt').style = 'display: block;color: red;';document.getElementById('textttt').style = 'display: block;'">YES</button>
     </div>
     <p id="texttt" style="color: red;display: none">Since I am unable of giving you a rose personally in real life..</p>
     <p id="textt" style="color: red;display: none">Here's 1 flower for each week I have had the privilege of knowing
       you. <img class="roseimg" style="width: 50px;" src="./img/heart.png"></p>
-    <p>
-      Hover over the envelope for your gift.
+    <p id="textttt" style="display: none;">
+      Hover over/click the envelope for your gift.
     </p>
   </div>
 
@@ -1222,37 +1222,27 @@
     id.style.top = Math.round(Math.random() * 300) - 100 + 'px';
     id.style.left = Math.round(Math.random() * 300) - 200 + 'px';
   }
+  var clickable = false
+  function makeclickable() {
+    clickable = true
+  }
   var isOpen = false
   $(document).ready(function () {
     $('.container').mouseenter(function () {
       if ($(document).width() >= 1000) {
-        isOpen = true
-        $('.card').stop().animate({
-          top: '-90px'
-        }, 'slow');
-        $('.card').css("visibility", "visible");
-        $('.envelope').css('visibility', 'visible');
-        $('.hearts').css('visibility', 'visible');
+        if (clickable) {
+          isOpen = true
+          $('.card').stop().animate({
+            top: '-90px'
+          }, 'slow');
+          $('.card').css("visibility", "visible");
+          $('.envelope').css('visibility', 'visible');
+          $('.hearts').css('visibility', 'visible');
+        }
       }
     }).mouseleave(function () {
       if ($(document).width() >= 1000) {
-        isOpen = false
-        $('.card').stop().animate({
-          top: 0
-        }, 'slow');
-        setTimeout(() => {
-          if (isOpen === false) {
-            $('.card').css("visibility", "hidden");
-            $('.envelopefront').css('visibility', 'visible');
-            $('.envelope').css('visibility', 'hidden');
-            $('.hearts').css('visibility', 'hidden');
-          }
-        }, "1000");
-      }
-    });
-    $('.container').on('mouseup', function () {
-      if ($(document).width() < 1000) {
-        if (isOpen) {
+        if (clickable) {
           isOpen = false
           $('.card').stop().animate({
             top: 0
@@ -1265,17 +1255,36 @@
               $('.hearts').css('visibility', 'hidden');
             }
           }, "1000");
-        } else {
-          isOpen = true
-          $('.card').stop().animate({
-            top: '-90px'
-          }, 'slow');
-          $('.card').css("visibility", "visible");
-          $('.envelope').css('visibility', 'visible');
-          $('.hearts').css('visibility', 'visible');
         }
       }
-
+    });
+    $('.container').on('mouseup', function () {
+      if ($(document).width() < 1000) {
+        if (clickable) {
+          if (isOpen) {
+            isOpen = false
+            $('.card').stop().animate({
+              top: 0
+            }, 'slow');
+            setTimeout(() => {
+              if (isOpen === false) {
+                $('.card').css("visibility", "hidden");
+                $('.envelopefront').css('visibility', 'visible');
+                $('.envelope').css('visibility', 'hidden');
+                $('.hearts').css('visibility', 'hidden');
+              }
+            }, "1000");
+          } else {
+            isOpen = true
+            $('.card').stop().animate({
+              top: '-90px'
+            }, 'slow');
+            $('.card').css("visibility", "visible");
+            $('.envelope').css('visibility', 'visible');
+            $('.hearts').css('visibility', 'visible');
+          }
+        }
+      }
     });
   });
 </script>
