@@ -47,6 +47,9 @@
             <Dimension>
                 <ows:Identifier>TIME</ows:Identifier>
                 <Default>2024-03-10</Default>
+                <Value>2024-02-20</Value>
+                <Value>2024-02-29</Value>
+                <Value>2024-03-10</Value>
             </Dimension>
             <Format>image/png</Format>
             <TileMatrixSetLink>
