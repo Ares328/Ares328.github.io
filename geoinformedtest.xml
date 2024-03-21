@@ -44,6 +44,10 @@
             <Style isDefault="true">
                 <ows:Identifier>default</ows:Identifier>
             </Style>
+            <Dimension>
+                <ows:Identifier>TIME</ows:Identifier>
+                <Default>2024-03-10</Default>
+            </Dimension>
             <Format>image/png</Format>
             <TileMatrixSetLink>
                 <TileMatrixSet>WebMercatorQuad</TileMatrixSet>
