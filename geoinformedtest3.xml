@@ -1,0 +1,140 @@
+<Capabilities xmlns="http://www.opengis.net/wmts/1.0" xmlns:ows="http://www.opengis.net/ows/1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gml="http://www.opengis.net/gml" xsi:schemaLocation="http://www.opengis.net/wmts/1.0 http://schemas.opengis.net/wmts/1.0/wmtsGetCapabilities_response.xsd" version="1.0.0">
+    <ows:ServiceIdentification>
+        <ows:Title>"Cloud Optimized GeoTIFF"</ows:Title>
+        <ows:ServiceType>OGC WMTS</ows:ServiceType>
+        <ows:ServiceTypeVersion>1.0.0</ows:ServiceTypeVersion>
+    </ows:ServiceIdentification>
+    <ows:OperationsMetadata>
+        <ows:Operation name="GetCapabilities">
+            <ows:DCP>
+                <ows:HTTP>
+                    <ows:Get xlink:href="http://localhost:8000/cog/WorldCRS84Quad/WMTSCapabilities.xml?url=https://nazka-tiles.s3.eu-west-1.amazonaws.com/globalsolaratlas_ghi.tif">
+                        <ows:Constraint name="GetEncoding">
+                            <ows:AllowedValues>
+                                <ows:Value>RESTful</ows:Value>
+                            </ows:AllowedValues>
+                        </ows:Constraint>
+                    </ows:Get>
+                </ows:HTTP>
+            </ows:DCP>
+        </ows:Operation>
+        <ows:Operation name="GetTile">
+            <ows:DCP>
+                <ows:HTTP>
+                    <ows:Get xlink:href="http://localhost:8000/cog/WorldCRS84Quad/WMTSCapabilities.xml?url=https://nazka-tiles.s3.eu-west-1.amazonaws.com/globalsolaratlas_ghi.tif">
+                        <ows:Constraint name="GetEncoding">
+                            <ows:AllowedValues>
+                                <ows:Value>RESTful</ows:Value>
+                            </ows:AllowedValues>
+                        </ows:Constraint>
+                    </ows:Get>
+                </ows:HTTP>
+            </ows:DCP>
+        </ows:Operation>
+    </ows:OperationsMetadata>
+    <Contents>
+        <Layer>
+            <ows:Title>Cloud Optimized GeoTIFF</ows:Title>
+            <ows:Identifier>cogeo</ows:Identifier>
+            <ows:Abstract>Cloud Optimized GeoTIFF</ows:Abstract>
+            <ows:WGS84BoundingBox crs="urn:ogc:def:crs:OGC:2:84">
+                <ows:LowerCorner>-180.0 -60.0</ows:LowerCorner>
+                <ows:UpperCorner>180.0 60.0</ows:UpperCorner>
+            </ows:WGS84BoundingBox>
+            <Style isDefault="true">
+                <ows:Identifier>default</ows:Identifier>
+            </Style>
+            <Format>image/png</Format>
+            <TileMatrixSetLink>
+                <TileMatrixSet>WorldCRS84Quad</TileMatrixSet>
+            </TileMatrixSetLink>
+            <ResourceURL format="image/png" resourceType="tile" template="http://localhost:8000/cog/tiles/WorldCRS84Quad/{TileMatrix}/{TileCol}/{TileRow}@1x.png?url=https%3A%2F%2Fnazka-tiles.s3.eu-west-1.amazonaws.com%2Fglobalsolaratlas_ghi.tif" />
+        </Layer>
+        <TileMatrixSet>
+            <ows:Identifier>WorldCRS84Quad</ows:Identifier>
+            <ows:SupportedCRS>http://www.opengis.net/def/crs/OGC/1.3/CRS84</ows:SupportedCRS>
+            <TileMatrix>
+                <ows:Identifier>0</ows:Identifier>
+                <ScaleDenominator>279541132.014358</ScaleDenominator>
+                <TopLeftCorner>-180 90</TopLeftCorner>
+                <TileWidth>256</TileWidth>
+                <TileHeight>256</TileHeight>
+                <MatrixWidth>2</MatrixWidth>
+                <MatrixHeight>1</MatrixHeight>
+            </TileMatrix>
+            <TileMatrix>
+                <ows:Identifier>1</ows:Identifier>
+                <ScaleDenominator>139770566.007179</ScaleDenominator>
+                <TopLeftCorner>-180 90</TopLeftCorner>
+                <TileWidth>256</TileWidth>
+                <TileHeight>256</TileHeight>
+                <MatrixWidth>4</MatrixWidth>
+                <MatrixHeight>2</MatrixHeight>
+            </TileMatrix>
+            <TileMatrix>
+                <ows:Identifier>2</ows:Identifier>
+                <ScaleDenominator>69885283.0035897</ScaleDenominator>
+                <TopLeftCorner>-180 90</TopLeftCorner>
+                <TileWidth>256</TileWidth>
+                <TileHeight>256</TileHeight>
+                <MatrixWidth>8</MatrixWidth>
+                <MatrixHeight>4</MatrixHeight>
+            </TileMatrix>
+            <TileMatrix>
+                <ows:Identifier>3</ows:Identifier>
+                <ScaleDenominator>34942641.5017948</ScaleDenominator>
+                <TopLeftCorner>-180 90</TopLeftCorner>
+                <TileWidth>256</TileWidth>
+                <TileHeight>256</TileHeight>
+                <MatrixWidth>16</MatrixWidth>
+                <MatrixHeight>8</MatrixHeight>
+            </TileMatrix>
+            <TileMatrix>
+                <ows:Identifier>4</ows:Identifier>
+                <ScaleDenominator>17471320.7508974</ScaleDenominator>
+                <TopLeftCorner>-180 90</TopLeftCorner>
+                <TileWidth>256</TileWidth>
+                <TileHeight>256</TileHeight>
+                <MatrixWidth>32</MatrixWidth>
+                <MatrixHeight>16</MatrixHeight>
+            </TileMatrix>
+            <TileMatrix>
+                <ows:Identifier>5</ows:Identifier>
+                <ScaleDenominator>8735660.37544871</ScaleDenominator>
+                <TopLeftCorner>-180 90</TopLeftCorner>
+                <TileWidth>256</TileWidth>
+                <TileHeight>256</TileHeight>
+                <MatrixWidth>64</MatrixWidth>
+                <MatrixHeight>32</MatrixHeight>
+            </TileMatrix>
+            <TileMatrix>
+                <ows:Identifier>6</ows:Identifier>
+                <ScaleDenominator>4367830.18772435</ScaleDenominator>
+                <TopLeftCorner>-180 90</TopLeftCorner>
+                <TileWidth>256</TileWidth>
+                <TileHeight>256</TileHeight>
+                <MatrixWidth>128</MatrixWidth>
+                <MatrixHeight>64</MatrixHeight>
+            </TileMatrix>
+            <TileMatrix>
+                <ows:Identifier>7</ows:Identifier>
+                <ScaleDenominator>2183915.09386217</ScaleDenominator>
+                <TopLeftCorner>-180 90</TopLeftCorner>
+                <TileWidth>256</TileWidth>
+                <TileHeight>256</TileHeight>
+                <MatrixWidth>256</MatrixWidth>
+                <MatrixHeight>128</MatrixHeight>
+            </TileMatrix>
+            <TileMatrix>
+                <ows:Identifier>8</ows:Identifier>
+                <ScaleDenominator>1091957.54693108</ScaleDenominator>
+                <TopLeftCorner>-180 90</TopLeftCorner>
+                <TileWidth>256</TileWidth>
+                <TileHeight>256</TileHeight>
+                <MatrixWidth>512</MatrixWidth>
+                <MatrixHeight>256</MatrixHeight>
+            </TileMatrix>
+        </TileMatrixSet>
+    </Contents>
+    <ServiceMetadataURL xlink:href="http://localhost:8000/cog/WorldCRS84Quad/WMTSCapabilities.xml?url=https://nazka-tiles.s3.eu-west-1.amazonaws.com/globalsolaratlas_ghi.tif" />
+</Capabilities>
